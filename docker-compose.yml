@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: develop
+    command: ["--host", "0.0.0.0", "api.main:app", "--reload"]
+    environment:
+      - LOG_LEVEL=debug
+      - SATELLITE_REPOSITORY_URL=https://www.celestrak.com/NORAD/elements/starlink.txt
+    ports:
+    - "8000:8000"
+    restart: on-failure
+    volumes:
+    - ./api:/app/api
