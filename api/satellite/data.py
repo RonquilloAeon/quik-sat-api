@@ -20,7 +20,7 @@ def _load_satellites(data: str):
 
     for satellite in satellite_data:
         line_1 = satellite[1].split(" ")
-        name = (satellite[0],)
+        name = satellite[0]
         catalog_number = line_1[1][:5]
         classification = line_1[1][-1:]
 
