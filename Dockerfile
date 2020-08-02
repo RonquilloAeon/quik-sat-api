@@ -26,4 +26,10 @@ EXPOSE 8000
 ENTRYPOINT ["uvicorn"]
 
 # Production
-# TODO
+FROM base as production
+COPY --from=base / /
+COPY gunicorn-config.py ./
+
+RUN pip3 install --no-cache-dir . gunicorn
+
+CMD exec gunicorn api.main:app -c gunicorn-config.py
