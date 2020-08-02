@@ -8,7 +8,7 @@ setup(
         "fastapi==0.60.1",
         "httpx==0.13.3",
         "pydantic==1.6.1",
-        "uvicorn==0.11.6",
+        "uvicorn==0.11.7",
     ],
     packages=find_packages(),
     include_package_data=True,
