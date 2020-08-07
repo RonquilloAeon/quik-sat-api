@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '--target', 'production', '-t', 'gcr.io/thelab2020/quik-sat', '.']
+  args: ['build', '--target', 'production', '-t', 'gcr.io/yourgcpproject/quik-sat', '.']
 images:
-- 'gcr.io/thelab2020/quik-sat'
+- 'gcr.io/yourgcpproject/quik-sat'
