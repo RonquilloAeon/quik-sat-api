@@ -6,7 +6,7 @@ setup(
     version="0.1.0",
     install_requires=[
         "fastapi==0.60.1",
-        "httpx==0.13.3",
+        "httpx==0.23.0",
         "pydantic==1.6.1",
         "uvicorn==0.11.7",
     ],
